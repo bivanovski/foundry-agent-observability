@@ -1,0 +1,9 @@
+qid,condition,rep,trace_id,n_spans,has_root,client_agent_spans,tool_spans,tool_calls_logged,file_search_spans,file_search_logged,sampled,complete,trace_omission,trace_repetition,trace_max_identical_calls
+P12,after,1,797b0e87afd64dd4a6feec2b894f0ac5,10,True,2,0,0,0,0,False,True,False,False,0
+R06,after,1,801d0284805d1daff6704a2e4b2bcdcc,11,True,2,0,0,1,1,False,True,False,False,0
+X07,before,1,6d97436fc7397240218ea12e1e2dd7e1,16,True,2,2,2,0,0,False,True,False,False,2
+X07,after,1,1dbc900702125c46b3fb9c625cc1614f,13,True,2,1,1,0,0,False,True,False,False,1
+O05,after,1,798ed17a418e57edf70166ff50b65f46,12,True,2,1,1,0,0,False,True,False,False,1
+O05,before,1,37aa8799afac0256371ff8d490c9e58b,12,True,2,1,1,0,0,False,True,False,False,1
+P12,before,1,fdc26498430cfe1bd0771fd20b4dfdba,10,True,2,0,0,1,1,False,True,False,False,0
+R06,before,1,f8de7af894ac836996697b5be70a24e3,10,True,2,0,0,1,1,False,True,False,False,0

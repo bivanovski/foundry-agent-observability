@@ -1,0 +1,20 @@
+,F1-forced,F2-forced
+conversations,36,24
+errors,0,0
+routed_as_expected,36,24
+searched,0,0
+omission_query_hits,36,0
+repetition_query_hits,0,0
+tool_calls,0,0
+runs_with_tool_call,0,0
+provenance_violations,0,0
+invented_id,0,0
+wrong_id,0,0
+asked_for_id,9,14
+judge_v2_correct,7,0
+judge_v3_correct,6,0
+tool_selection,not_applicable 36,
+task_adherence,"pass 34, fail 2",
+intent_resolution,pass 36,"pass 22, fail 2"
+tool_input_accuracy,,not_applicable 24
+tool_call_accuracy,,not_applicable 24

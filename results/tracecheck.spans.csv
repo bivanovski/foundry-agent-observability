@@ -1,0 +1,317 @@
+operation_Id,id,operation_ParentId,name,timestamp,duration,success,itemCount,gen_ai.operation.name,gen_ai.agent.name,gen_ai.agent.id,gen_ai.tool.name,gen_ai.tool.type,gen_ai.tool.call.arguments,gen_ai.tool.call.result,gen_ai.usage.input_tokens,gen_ai.usage.output_tokens,gen_ai.request.model,gen_ai.response.model,error.type,experiment.qid,experiment.condition,experiment.rep,experiment.scenario
+1dbc900702125c46b3fb9c625cc1614f,2eabdad94e1b5feb,1dbc900702125c46b3fb9c625cc1614f,invoke_workflow support-desk,2026-11-16T22:43:09.288385Z,15214,True,1,,,,,,,,,,,,,X07,after,1,mistake3
+1dbc900702125c46b3fb9c625cc1614f,11313091cb353fa1,2eabdad94e1b5feb,invoke_agent triage-agent,2026-11-16T22:43:09.288426Z,5752,True,1,invoke_agent,triage-agent,,,,,,177,192,,,,,,,
+1dbc900702125c46b3fb9c625cc1614f,8e98b2b7bfc333e0,11313091cb353fa1,AIProjectClient.get_openai_client,2026-11-16T22:43:09.288478Z,13,True,1,,,,,,,,,,,,,,,,
+1dbc900702125c46b3fb9c625cc1614f,d9605c5b9eb24894,11313091cb353fa1,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:09.543571Z,5495,True,1,,,,,,,,,,,,,,,,
+1dbc900702125c46b3fb9c625cc1614f,e52851a0f3504758,d9605c5b9eb24894,invoke_agent triage-agent:1,2026-11-16T22:43:12.8097775Z,2049.7886,True,1,invoke_agent,triage-agent,triage-agent:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+1dbc900702125c46b3fb9c625cc1614f,03f745e421ed8b10,e52851a0f3504758,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:14.4119002Z,149.8772,True,1,chat,triage-agent,triage-agent:1,,,,,177,192,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+1dbc900702125c46b3fb9c625cc1614f,cd9657e310bd8e01,2eabdad94e1b5feb,invoke_agent order-agent-after,2026-11-16T22:43:15.04113Z,9461,True,1,invoke_agent,order-agent-after,,,,,,802,885,,,,,,,
+1dbc900702125c46b3fb9c625cc1614f,6a5de00963c24c25,cd9657e310bd8e01,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:15.042583Z,2439,True,1,,,,,,,,,,,,,,,,
+1dbc900702125c46b3fb9c625cc1614f,0fc283a87172534a,6a5de00963c24c25,invoke_agent order-agent-after:1,2026-11-16T22:43:15.4439066Z,1878.5388,True,1,invoke_agent,order-agent-after,order-agent-after:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+1dbc900702125c46b3fb9c625cc1614f,b78bd9b66b714551,cd9657e310bd8e01,execute_tool get_order_status,2026-11-16T22:43:17.48358Z,0,True,1,execute_tool,order-agent-after,,get_order_status,function,"{""order_id"": ""84402""}",The order system is temporarily unavailable. Do not retry. Apologise and offer to email the customer when it's back.,,,,,,,,,
+1dbc900702125c46b3fb9c625cc1614f,1181ee42eb77f2b6,cd9657e310bd8e01,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:17.485162Z,7014,True,1,,,,,,,,,,,,,,,,
+1dbc900702125c46b3fb9c625cc1614f,58255e91c4d04c0a,1181ee42eb77f2b6,invoke_agent order-agent-after:1,2026-11-16T22:43:17.8403582Z,6515.9025,True,1,invoke_agent,order-agent-after,order-agent-after:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+1dbc900702125c46b3fb9c625cc1614f,fd397a1e284f7194,58255e91c4d04c0a,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:23.1886936Z,930.8183,True,1,chat,order-agent-after,order-agent-after:1,,,,,495,733,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+37aa8799afac0256371ff8d490c9e58b,8b25fa7d46c917b6,37aa8799afac0256371ff8d490c9e58b,invoke_workflow support-desk,2026-11-16T22:43:24.502213Z,11492,True,1,,,,,,,,,,,,,O05,before,1,mistake2
+37aa8799afac0256371ff8d490c9e58b,58be52902638af88,8b25fa7d46c917b6,invoke_agent triage-agent,2026-11-16T22:43:24.502272Z,3821,True,1,invoke_agent,triage-agent,,,,,,226,349,,,,,,,
+37aa8799afac0256371ff8d490c9e58b,faf39e2115154f72,58be52902638af88,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:24.503383Z,3818,True,1,,,,,,,,,,,,,,,,
+37aa8799afac0256371ff8d490c9e58b,77d367351cf8ed84,faf39e2115154f72,invoke_agent triage-agent:1,2026-11-16T22:43:24.7954142Z,3368.5407,True,1,invoke_agent,triage-agent,triage-agent:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+37aa8799afac0256371ff8d490c9e58b,6cc1d9ab3945238b,77d367351cf8ed84,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:27.5383905Z,368.5343,True,1,chat,triage-agent,triage-agent:1,,,,,226,349,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+37aa8799afac0256371ff8d490c9e58b,94ff1fc319620067,8b25fa7d46c917b6,invoke_agent order-agent-before,2026-11-16T22:43:28.323008Z,7672,True,1,invoke_agent,order-agent-before,,,,,,609,747,,,,,,,
+37aa8799afac0256371ff8d490c9e58b,9f43e7a5075df127,94ff1fc319620067,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:28.324137Z,1743,True,1,,,,,,,,,,,,,,,,
+37aa8799afac0256371ff8d490c9e58b,8fa963ddc79b6a33,9f43e7a5075df127,invoke_agent order-agent-before:1,2026-11-16T22:43:28.6556641Z,1261.7135,True,1,invoke_agent,order-agent-before,order-agent-before:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+37aa8799afac0256371ff8d490c9e58b,f1902aaa279cadc5,94ff1fc319620067,execute_tool get_order_status,2026-11-16T22:43:30.069412Z,0,True,1,execute_tool,order-agent-before,,get_order_status,function,"{""order_id"": ""51877""}","{""order_id"": ""51877"", ""customer"": ""Ana T."", ""items"": [""Logitech webcam""], ""status"": ""out_for_delivery"", ""carrier"": ""PostExpress"", ""estimated_delivery"": ""2026-11-19"", ""note"": ""Out for delivery today.""}",,,,,,,,,
+37aa8799afac0256371ff8d490c9e58b,be30b5b674c49f87,94ff1fc319620067,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:30.071156Z,5922,True,1,,,,,,,,,,,,,,,,
+37aa8799afac0256371ff8d490c9e58b,bb53571c68cc4733,be30b5b674c49f87,invoke_agent order-agent-before:1,2026-11-16T22:43:30.4766212Z,5231.5828,True,1,invoke_agent,order-agent-before,order-agent-before:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+37aa8799afac0256371ff8d490c9e58b,1137884b0fca4e3b,bb53571c68cc4733,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:34.41402Z,1026.0903,True,1,chat,order-agent-before,order-agent-before:1,,,,,379,670,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,26a3ab85bdff06b7,6d97436fc7397240218ea12e1e2dd7e1,invoke_workflow support-desk,2026-11-16T22:43:09.289006Z,14505,True,1,,,,,,,,,,,,,X07,before,1,mistake3
+6d97436fc7397240218ea12e1e2dd7e1,9ce3e9c1a6b9baf4,26a3ab85bdff06b7,invoke_agent triage-agent,2026-11-16T22:43:09.289021Z,4021,True,1,invoke_agent,triage-agent,,,,,,177,242,,,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,65fcec6bec4cd339,9ce3e9c1a6b9baf4,AIProjectClient.get_openai_client,2026-11-16T22:43:09.289047Z,13,True,1,,,,,,,,,,,,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,29d8598ad4c6be21,9ce3e9c1a6b9baf4,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:09.544942Z,3723,True,1,,,,,,,,,,,,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,4c9b78225fbaa915,29d8598ad4c6be21,invoke_agent triage-agent:1,2026-11-16T22:43:10.2566458Z,2817.8637,True,1,invoke_agent,triage-agent,triage-agent:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,86700397922db544,4c9b78225fbaa915,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:12.6725747Z,219.3234,True,1,chat,triage-agent,triage-agent:1,,,,,177,242,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,1f9aff200d606e4f,26a3ab85bdff06b7,invoke_agent order-agent-before,2026-11-16T22:43:13.309875Z,10485,True,1,invoke_agent,order-agent-before,,,,,,819,777,,,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,fdc8eb36098fe9a2,1f9aff200d606e4f,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:13.310451Z,2176,True,1,,,,,,,,,,,,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,fb4d7c0e4a69fcb8,fdc8eb36098fe9a2,invoke_agent order-agent-before:1,2026-11-16T22:43:14.0092983Z,1337.1352,True,1,invoke_agent,order-agent-before,order-agent-before:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,8008a9797a4ee76b,1f9aff200d606e4f,execute_tool get_order_status,2026-11-16T22:43:15.493455Z,0,True,1,execute_tool,order-agent-before,,get_order_status,function,"{""order_id"": ""84402""}",Error,,,,,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,98d74e1ff26130a6,1f9aff200d606e4f,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:15.49901Z,1774,True,1,,,,,,,,,,,,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,55343719942d9dcd,98d74e1ff26130a6,invoke_agent order-agent-before:1,2026-11-16T22:43:15.9604637Z,1175.2571,True,1,invoke_agent,order-agent-before,order-agent-before:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,3160aa97ea067427,1f9aff200d606e4f,execute_tool get_order_status,2026-11-16T22:43:17.275839Z,0,True,1,execute_tool,order-agent-before,,get_order_status,function,"{""order_id"": ""84402""}",Error,,,,,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,1f4dfea443671e4d,1f9aff200d606e4f,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:17.277775Z,6514,True,1,,,,,,,,,,,,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,9da865cc31deabad,1f4dfea443671e4d,invoke_agent order-agent-before:1,2026-11-16T22:43:17.6504073Z,5973.5965,True,1,invoke_agent,order-agent-before,order-agent-before:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+6d97436fc7397240218ea12e1e2dd7e1,d201c6a6b8ad14a9,9da865cc31deabad,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:22.2641517Z,1096.6968,True,1,chat,order-agent-before,order-agent-before:1,,,,,345,655,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+797b0e87afd64dd4a6feec2b894f0ac5,ffd1e9c9558daa1d,797b0e87afd64dd4a6feec2b894f0ac5,invoke_workflow support-desk,2026-11-16T22:43:09.288615Z,9176,True,1,,,,,,,,,,,,,P12,after,1,mistake1
+797b0e87afd64dd4a6feec2b894f0ac5,0bfffc4a2275e113,ffd1e9c9558daa1d,invoke_agent triage-agent,2026-11-16T22:43:09.288633Z,4963,True,1,invoke_agent,triage-agent,,,,,,176,516,,,,,,,
+797b0e87afd64dd4a6feec2b894f0ac5,2dc99f4f8d83bf00,0bfffc4a2275e113,AIProjectClient.get_openai_client,2026-11-16T22:43:09.288668Z,13,True,1,,,,,,,,,,,,,,,,
+797b0e87afd64dd4a6feec2b894f0ac5,f8cb0881cb587b60,0bfffc4a2275e113,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:09.545467Z,4705,True,1,,,,,,,,,,,,,,,,
+797b0e87afd64dd4a6feec2b894f0ac5,0ed31ba692b2ba64,f8cb0881cb587b60,invoke_agent triage-agent:1,2026-11-16T22:43:10.2819495Z,3797.3093,True,1,invoke_agent,triage-agent,triage-agent:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+797b0e87afd64dd4a6feec2b894f0ac5,45920f2d0d8ca662,0ed31ba692b2ba64,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:13.5035747Z,237.5192,True,1,chat,triage-agent,triage-agent:1,,,,,176,516,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+797b0e87afd64dd4a6feec2b894f0ac5,35e103b931854ac9,ffd1e9c9558daa1d,invoke_agent order-agent-after,2026-11-16T22:43:14.251719Z,4212,True,1,invoke_agent,order-agent-after,,,,,,305,421,,,,,,,
+797b0e87afd64dd4a6feec2b894f0ac5,f8e01cbce5a04f6a,35e103b931854ac9,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:14.252808Z,4209,True,1,,,,,,,,,,,,,,,,
+797b0e87afd64dd4a6feec2b894f0ac5,d8948f3c6c1a35dc,f8e01cbce5a04f6a,invoke_agent order-agent-after:1,2026-11-16T22:43:14.8671581Z,3428.5749,True,1,invoke_agent,order-agent-after,order-agent-after:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+797b0e87afd64dd4a6feec2b894f0ac5,ca07be7f653dcbb8,d8948f3c6c1a35dc,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:17.7616888Z,419.4402,True,1,chat,order-agent-after,order-agent-after:1,,,,,305,421,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+798ed17a418e57edf70166ff50b65f46,f39bf0db15e469aa,798ed17a418e57edf70166ff50b65f46,invoke_workflow support-desk,2026-11-16T22:43:18.464423Z,11292,True,1,,,,,,,,,,,,,O05,after,1,mistake2
+798ed17a418e57edf70166ff50b65f46,5084e24abc1e0bca,f39bf0db15e469aa,invoke_agent triage-agent,2026-11-16T22:43:18.464506Z,2896,True,1,invoke_agent,triage-agent,,,,,,226,243,,,,,,,
+798ed17a418e57edf70166ff50b65f46,f33d9ef9deb58359,5084e24abc1e0bca,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:18.465805Z,2894,True,1,,,,,,,,,,,,,,,,
+798ed17a418e57edf70166ff50b65f46,e308d668331d2b3c,f33d9ef9deb58359,invoke_agent triage-agent:1,2026-11-16T22:43:18.7329914Z,2486.0353,True,1,invoke_agent,triage-agent,triage-agent:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+798ed17a418e57edf70166ff50b65f46,b18af31fe0079341,e308d668331d2b3c,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:20.3758395Z,485.2779,True,1,chat,triage-agent,triage-agent:1,,,,,226,243,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+798ed17a418e57edf70166ff50b65f46,0d6385246cb6975c,f39bf0db15e469aa,invoke_agent order-agent-after,2026-11-16T22:43:21.360764Z,8396,True,1,invoke_agent,order-agent-after,,,,,,914,756,,,,,,,
+798ed17a418e57edf70166ff50b65f46,17a19148bb03e7c1,0d6385246cb6975c,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:21.361651Z,1837,True,1,,,,,,,,,,,,,,,,
+798ed17a418e57edf70166ff50b65f46,6e451d0ec0e889bc,17a19148bb03e7c1,invoke_agent order-agent-after:1,2026-11-16T22:43:21.7467738Z,1196.8873,True,1,invoke_agent,order-agent-after,order-agent-after:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+798ed17a418e57edf70166ff50b65f46,5d74288ddd45f54e,0d6385246cb6975c,execute_tool get_order_status,2026-11-16T22:43:23.200761Z,0,True,1,execute_tool,order-agent-after,,get_order_status,function,"{""order_id"": ""51877""}","{""order_id"": ""51877"", ""customer"": ""Ana T."", ""items"": [""Logitech webcam""], ""status"": ""out_for_delivery"", ""carrier"": ""PostExpress"", ""estimated_delivery"": ""2026-11-19"", ""note"": ""Out for delivery today.""}",,,,,,,,,
+798ed17a418e57edf70166ff50b65f46,8d99d721f5e480a8,0d6385246cb6975c,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:23.202321Z,6552,True,1,,,,,,,,,,,,,,,,
+798ed17a418e57edf70166ff50b65f46,5ac42ab26aab316c,8d99d721f5e480a8,invoke_agent order-agent-after:1,2026-11-16T22:43:23.7579013Z,5762.8059,True,1,invoke_agent,order-agent-after,order-agent-after:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+798ed17a418e57edf70166ff50b65f46,0f3261748de7a0be,5ac42ab26aab316c,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:28.0461605Z,1032.5807,True,1,chat,order-agent-after,order-agent-after:1,,,,,523,696,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+801d0284805d1daff6704a2e4b2bcdcc,c0d5314b91c55c03,801d0284805d1daff6704a2e4b2bcdcc,invoke_workflow support-desk,2026-11-16T22:43:09.288812Z,14385,True,1,,,,,,,,,,,,,R06,after,1,control
+801d0284805d1daff6704a2e4b2bcdcc,a122ad6a9d6b3d5d,c0d5314b91c55c03,invoke_agent triage-agent,2026-11-16T22:43:09.288834Z,4129,True,1,invoke_agent,triage-agent,,,,,,166,366,,,,,,,
+801d0284805d1daff6704a2e4b2bcdcc,bb40decfc32db844,a122ad6a9d6b3d5d,AIProjectClient.get_openai_client,2026-11-16T22:43:09.28887Z,13,True,1,,,,,,,,,,,,,,,,
+801d0284805d1daff6704a2e4b2bcdcc,f457d663b7af8ab7,a122ad6a9d6b3d5d,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:09.546015Z,3871,True,1,,,,,,,,,,,,,,,,
+801d0284805d1daff6704a2e4b2bcdcc,dd28f0443f6a43fc,f457d663b7af8ab7,invoke_agent triage-agent:1,2026-11-16T22:43:10.1849238Z,3095.1306,True,1,invoke_agent,triage-agent,triage-agent:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+801d0284805d1daff6704a2e4b2bcdcc,b3f21b6f1f99fddc,dd28f0443f6a43fc,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:12.8855221Z,179.5945,True,1,chat,triage-agent,triage-agent:1,,,,,166,366,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+801d0284805d1daff6704a2e4b2bcdcc,caeef8ea8763bf27,c0d5314b91c55c03,invoke_agent policy-agent-after,2026-11-16T22:43:13.41803Z,10255,True,1,invoke_agent,policy-agent-after,,,,,,3135,996,,,,,,,
+801d0284805d1daff6704a2e4b2bcdcc,5f33956d9535997e,caeef8ea8763bf27,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:13.418711Z,10252,True,1,,,,,,,,,,,,,,,,
+801d0284805d1daff6704a2e4b2bcdcc,db8531cf961164b4,5f33956d9535997e,invoke_agent policy-agent-after:1,2026-11-16T22:43:14.3361587Z,9079.5123,True,1,invoke_agent,policy-agent-after,policy-agent-after:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+801d0284805d1daff6704a2e4b2bcdcc,9a1521f9297fbbdf,db8531cf961164b4,execute_tool file_search.msearch,2026-11-16T22:43:16.6239884Z,340.176,True,1,execute_tool,policy-agent-after,policy-agent-after:1,file_search.msearch,extension,"{""queries"":[""Can I return something I bought at your partner's physical shop in Berlin?"",""VoltCart return policy partner physical shop Berlin"",""VoltCart returns for items bought at partner stores"",""return item purchased at partner store Berlin VoltCart policy"",""VoltCart warranty returns partner shop""]}","# 【0†returns_and_refunds.md†assistant-S7LaGeZu3LGDCyhU6fnNPE】
+Content source: Source.file
+Title: returns_and_refunds.md
+Citation Marker: fileciteturn0file0
+Content Snippet:
+# VoltCart Returns and Refunds Policy
+
+Effective 1 September 2026. Applies to all orders placed on voltcart.example.
+
+## Return window
+You can return most items within **30 calendar days of delivery**. The 30 days start on the delivery date shown in your order history, not the order date. Returns requested after 30 days are not accepted.
+
+## Holiday extension
+Items delivered between **15 November and 24 December** can be returned until **15 January** of the following year.
+
+## Condition of returned items
+Items must be complete and returned with all accessories and the original packaging.
+
+## Items that cannot be returned
+- **In-ear headphones and earbuds** cannot be returned once the hygiene seal has been broken, unless the item is defective.
+- **Gift cards** cannot be returned or refunded.
+- **Software licences and digital downloads** cannot be returned once the activation code has been revealed.
+
+## Restocking fee
+Opened **laptops and tablets** returned in working condition are subject to a **15% restocking fee**. Unopened laptops and tablets have no fee. No other product category has a restocking fee.
+
+## Return shipping
+- If the item is defective or we sent the wrong item, return shipping is free.
+- For all other returns (for example, you changed your mind), the customer pays a flat return shipping fee of **4.99 EUR**, deducted from the refund.
+
+## Refunds
+Refunds are issued to the original payment method within **14 days** of the item arriving at our warehouse.
+
+## How to start a return
+Returns are started from the order page or by our support team using the order number.
+# 【1†warranty.md†assistant-96WjXdppSuAd7jYfQc2ejJ】
+Content source: Source.file
+Title: warranty.md
+Citation Marker: fileciteturn0file1
+Content Snippet:
+# VoltCart Warranty Policy
+
+## Standard warranty
+All electronics sold by VoltCart carry a **24-month warranty** from the delivery date against manufacturing defects.
+
+## Batteries
+Built-in and removable batteries (including laptop, phone and headphone batteries) are covered for **12 months** only. A battery that degrades after 12 months is not a warranty defect.
+
+## What is not covered
+- Accidental damage, such as drops, cracked screens or liquid damage
+- Normal wear and cosmetic damage
+- Damage caused by unauthorised repair
+
+## CarePlus extended protection
+CarePlus extends cover to **36 months** and adds one accidental-damage repair. CarePlus can only be purchased **within 30 days of delivery** of the product.
+
+## Making a warranty claim
+Warranty claims require the order number. Repairs are completed within **10 business days** of the item arriving at our service centre. If a repair is not possible, we replace the item or issue a refund.
+# 【2†shipping_and_pricing.md†assistant-UoZeaxknuVu3sCeE8YoPQf】
+Content source: Source.file
+Title: shipping_and_pricing.md
+Citation Marker: fileciteturn0file2
+Content Snippet:
+# VoltCart Shipping and Pricing Policy
+
+## Delivery options
+- **Standard delivery:** 3 to 5 business days. Free on orders over **50 EUR**, otherwise 3.99 EUR.
+- **Express delivery:** 1 to 2 business days for **9.99 EUR**.
+
+## Where we ship
+We ship to North Macedonia, Serbia, Bulgaria, Greece and Albania.
+
+## Price match
+If the price of an item on voltcart.example drops within **7 days of delivery**, we refund the difference on request. Price match applies only to prices on our own store, not to other retailers.
+Visible: 0% - 100%",,,,,,,,,
+801d0284805d1daff6704a2e4b2bcdcc,a0423f07b38b3c24,db8531cf961164b4,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:22.2591736Z,897.6648,True,1,chat,policy-agent-after,policy-agent-after:1,,,,,3135,770,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+f8de7af894ac836996697b5be70a24e3,82ac20e769a4246f,f8de7af894ac836996697b5be70a24e3,invoke_workflow support-desk,2026-11-16T22:43:23.79461Z,17155,True,1,,,,,,,,,,,,,R06,before,1,control
+f8de7af894ac836996697b5be70a24e3,88b1ed54a574b3fd,82ac20e769a4246f,invoke_agent triage-agent,2026-11-16T22:43:23.794664Z,3197,True,1,invoke_agent,triage-agent,,,,,,166,350,,,,,,,
+f8de7af894ac836996697b5be70a24e3,901477513bfa6842,88b1ed54a574b3fd,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:23.795793Z,3194,True,1,,,,,,,,,,,,,,,,
+f8de7af894ac836996697b5be70a24e3,7360a31eb5cb60ee,901477513bfa6842,invoke_agent triage-agent:1,2026-11-16T22:43:24.1053145Z,2708.0061,True,1,invoke_agent,triage-agent,triage-agent:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+f8de7af894ac836996697b5be70a24e3,172f15e285e4acfa,7360a31eb5cb60ee,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:26.338338Z,210.511,True,1,chat,triage-agent,triage-agent:1,,,,,166,350,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+f8de7af894ac836996697b5be70a24e3,33836eae388371f5,82ac20e769a4246f,invoke_agent policy-agent-before,2026-11-16T22:43:26.991475Z,13958,True,1,invoke_agent,policy-agent-before,,,,,,3036,1416,,,,,,,
+f8de7af894ac836996697b5be70a24e3,5d0f5b336486add3,33836eae388371f5,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:26.992953Z,13953,True,1,,,,,,,,,,,,,,,,
+f8de7af894ac836996697b5be70a24e3,c5037815fd3b290f,5d0f5b336486add3,invoke_agent policy-agent-before:1,2026-11-16T22:43:27.5171072Z,13218.6896,True,1,invoke_agent,policy-agent-before,policy-agent-before:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+f8de7af894ac836996697b5be70a24e3,3a8fb5262d77103f,c5037815fd3b290f,execute_tool file_search.msearch,2026-11-16T22:43:29.4240982Z,234.6922,True,1,execute_tool,policy-agent-before,policy-agent-before:1,file_search.msearch,extension,"{""queries"":[""Can items bought at VoltCart's partner physical shop in Berlin be returned?"", ""VoltCart partner store return policy Berlin"", ""policy for partner-store purchases VoltCart returns refunds Germany"", ""VoltCart returns for items bought at partner retail stores Berlin partner-store purchases""]}","# 【0†returns_and_refunds.md†assistant-S7LaGeZu3LGDCyhU6fnNPE】
+Content source: Source.file
+Title: returns_and_refunds.md
+Citation Marker: fileciteturn0file0
+Content Snippet:
+# VoltCart Returns and Refunds Policy
+
+Effective 1 September 2026. Applies to all orders placed on voltcart.example.
+
+## Return window
+You can return most items within **30 calendar days of delivery**. The 30 days start on the delivery date shown in your order history, not the order date. Returns requested after 30 days are not accepted.
+
+## Holiday extension
+Items delivered between **15 November and 24 December** can be returned until **15 January** of the following year.
+
+## Condition of returned items
+Items must be complete and returned with all accessories and the original packaging.
+
+## Items that cannot be returned
+- **In-ear headphones and earbuds** cannot be returned once the hygiene seal has been broken, unless the item is defective.
+- **Gift cards** cannot be returned or refunded.
+- **Software licences and digital downloads** cannot be returned once the activation code has been revealed.
+
+## Restocking fee
+Opened **laptops and tablets** returned in working condition are subject to a **15% restocking fee**. Unopened laptops and tablets have no fee. No other product category has a restocking fee.
+
+## Return shipping
+- If the item is defective or we sent the wrong item, return shipping is free.
+- For all other returns (for example, you changed your mind), the customer pays a flat return shipping fee of **4.99 EUR**, deducted from the refund.
+
+## Refunds
+Refunds are issued to the original payment method within **14 days** of the item arriving at our warehouse.
+
+## How to start a return
+Returns are started from the order page or by our support team using the order number.
+# 【1†shipping_and_pricing.md†assistant-UoZeaxknuVu3sCeE8YoPQf】
+Content source: Source.file
+Title: shipping_and_pricing.md
+Citation Marker: fileciteturn0file1
+Content Snippet:
+# VoltCart Shipping and Pricing Policy
+
+## Delivery options
+- **Standard delivery:** 3 to 5 business days. Free on orders over **50 EUR**, otherwise 3.99 EUR.
+- **Express delivery:** 1 to 2 business days for **9.99 EUR**.
+
+## Where we ship
+We ship to North Macedonia, Serbia, Bulgaria, Greece and Albania.
+
+## Price match
+If the price of an item on voltcart.example drops within **7 days of delivery**, we refund the difference on request. Price match applies only to prices on our own store, not to other retailers.
+# 【2†warranty.md†assistant-96WjXdppSuAd7jYfQc2ejJ】
+Content source: Source.file
+Title: warranty.md
+Citation Marker: fileciteturn0file2
+Content Snippet:
+# VoltCart Warranty Policy
+
+## Standard warranty
+All electronics sold by VoltCart carry a **24-month warranty** from the delivery date against manufacturing defects.
+
+## Batteries
+Built-in and removable batteries (including laptop, phone and headphone batteries) are covered for **12 months** only. A battery that degrades after 12 months is not a warranty defect.
+
+## What is not covered
+- Accidental damage, such as drops, cracked screens or liquid damage
+- Normal wear and cosmetic damage
+- Damage caused by unauthorised repair
+
+## CarePlus extended protection
+CarePlus extends cover to **36 months** and adds one accidental-damage repair. CarePlus can only be purchased **within 30 days of delivery** of the product.
+
+## Making a warranty claim
+Warranty claims require the order number. Repairs are completed within **10 business days** of the item arriving at our service centre. If a repair is not possible, we replace the item or issue a refund.
+Visible: 0% - 100%",,,,,,,,,
+f8de7af894ac836996697b5be70a24e3,4c1c8474c51c8ad0,c5037815fd3b290f,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:37.9017036Z,2475.4863,True,1,chat,policy-agent-before,policy-agent-before:1,,,,,3036,1235,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+fdc26498430cfe1bd0771fd20b4dfdba,c30c62bf6efbf3bb,fdc26498430cfe1bd0771fd20b4dfdba,invoke_workflow support-desk,2026-11-16T22:43:23.67371Z,15125,True,1,,,,,,,,,,,,,P12,before,1,mistake1
+fdc26498430cfe1bd0771fd20b4dfdba,6653b48e1363da7d,c30c62bf6efbf3bb,invoke_agent triage-agent,2026-11-16T22:43:23.673768Z,3931,True,1,invoke_agent,triage-agent,,,,,,176,360,,,,,,,
+fdc26498430cfe1bd0771fd20b4dfdba,e50ed0d4e735fd41,6653b48e1363da7d,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:23.674889Z,3928,True,1,,,,,,,,,,,,,,,,
+fdc26498430cfe1bd0771fd20b4dfdba,e44256afd0122e75,e50ed0d4e735fd41,invoke_agent triage-agent:1,2026-11-16T22:43:23.9623579Z,3390.1088,True,1,invoke_agent,triage-agent,triage-agent:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+fdc26498430cfe1bd0771fd20b4dfdba,c648a5bf67acc635,e44256afd0122e75,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:26.9479813Z,167.259,True,1,chat,triage-agent,triage-agent:1,,,,,176,360,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+fdc26498430cfe1bd0771fd20b4dfdba,895390db4253010a,c30c62bf6efbf3bb,invoke_agent policy-agent-before,2026-11-16T22:43:27.605033Z,11194,True,1,invoke_agent,policy-agent-before,,,,,,3031,1104,,,,,,,
+fdc26498430cfe1bd0771fd20b4dfdba,00a56d2fdcc751f1,895390db4253010a,POST /api/projects/agentobs-proj/openai/v1/responses,2026-11-16T22:43:27.606373Z,11189,True,1,,,,,,,,,,,,,,,,
+fdc26498430cfe1bd0771fd20b4dfdba,e72592392d0e564a,00a56d2fdcc751f1,invoke_agent policy-agent-before:1,2026-11-16T22:43:27.9944933Z,10655.4723,True,1,invoke_agent,policy-agent-before,policy-agent-before:1,,,,,,,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,
+fdc26498430cfe1bd0771fd20b4dfdba,b3605cd40b2930a0,e72592392d0e564a,execute_tool file_search.msearch,2026-11-16T22:43:29.7560563Z,244.6947,True,1,execute_tool,policy-agent-before,policy-agent-before:1,file_search.msearch,extension,"{""queries"":[""Can I still return a coffee machine that was ordered 35 days ago and delivered 26 days ago?"", ""VoltCart return policy days after delivery return window 30 days"", ""VoltageCart returns refund policy 30-day return window coffee machine"", ""VoltCart restocking fee electronics returns warranty vs return policy""]}","# 【0†returns_and_refunds.md†assistant-S7LaGeZu3LGDCyhU6fnNPE】
+Content source: Source.file
+Title: returns_and_refunds.md
+Citation Marker: fileciteturn0file0
+Content Snippet:
+# VoltCart Returns and Refunds Policy
+
+Effective 1 September 2026. Applies to all orders placed on voltcart.example.
+
+## Return window
+You can return most items within **30 calendar days of delivery**. The 30 days start on the delivery date shown in your order history, not the order date. Returns requested after 30 days are not accepted.
+
+## Holiday extension
+Items delivered between **15 November and 24 December** can be returned until **15 January** of the following year.
+
+## Condition of returned items
+Items must be complete and returned with all accessories and the original packaging.
+
+## Items that cannot be returned
+- **In-ear headphones and earbuds** cannot be returned once the hygiene seal has been broken, unless the item is defective.
+- **Gift cards** cannot be returned or refunded.
+- **Software licences and digital downloads** cannot be returned once the activation code has been revealed.
+
+## Restocking fee
+Opened **laptops and tablets** returned in working condition are subject to a **15% restocking fee**. Unopened laptops and tablets have no fee. No other product category has a restocking fee.
+
+## Return shipping
+- If the item is defective or we sent the wrong item, return shipping is free.
+- For all other returns (for example, you changed your mind), the customer pays a flat return shipping fee of **4.99 EUR**, deducted from the refund.
+
+## Refunds
+Refunds are issued to the original payment method within **14 days** of the item arriving at our warehouse.
+
+## How to start a return
+Returns are started from the order page or by our support team using the order number.
+# 【1†warranty.md†assistant-96WjXdppSuAd7jYfQc2ejJ】
+Content source: Source.file
+Title: warranty.md
+Citation Marker: fileciteturn0file1
+Content Snippet:
+# VoltCart Warranty Policy
+
+## Standard warranty
+All electronics sold by VoltCart carry a **24-month warranty** from the delivery date against manufacturing defects.
+
+## Batteries
+Built-in and removable batteries (including laptop, phone and headphone batteries) are covered for **12 months** only. A battery that degrades after 12 months is not a warranty defect.
+
+## What is not covered
+- Accidental damage, such as drops, cracked screens or liquid damage
+- Normal wear and cosmetic damage
+- Damage caused by unauthorised repair
+
+## CarePlus extended protection
+CarePlus extends cover to **36 months** and adds one accidental-damage repair. CarePlus can only be purchased **within 30 days of delivery** of the product.
+
+## Making a warranty claim
+Warranty claims require the order number. Repairs are completed within **10 business days** of the item arriving at our service centre. If a repair is not possible, we replace the item or issue a refund.
+# 【2†shipping_and_pricing.md†assistant-UoZeaxknuVu3sCeE8YoPQf】
+Content source: Source.file
+Title: shipping_and_pricing.md
+Citation Marker: fileciteturn0file2
+Content Snippet:
+# VoltCart Shipping and Pricing Policy
+
+## Delivery options
+- **Standard delivery:** 3 to 5 business days. Free on orders over **50 EUR**, otherwise 3.99 EUR.
+- **Express delivery:** 1 to 2 business days for **9.99 EUR**.
+
+## Where we ship
+We ship to North Macedonia, Serbia, Bulgaria, Greece and Albania.
+
+## Price match
+If the price of an item on voltcart.example drops within **7 days of delivery**, we refund the difference on request. Price match applies only to prices on our own store, not to other retailers.
+Visible: 0% - 100%",,,,,,,,,
+fdc26498430cfe1bd0771fd20b4dfdba,16021ba25e01b0ed,e72592392d0e564a,chat gpt-5-mini-2025-08-07,2026-11-16T22:43:35.5344943Z,2765.5463,True,1,chat,policy-agent-before,policy-agent-before:1,,,,,3031,936,gpt-5-mini-2025-08-07,gpt-5-mini-2025-08-07,,,,,

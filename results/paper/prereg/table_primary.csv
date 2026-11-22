@@ -1,0 +1,35 @@
+scenario,metric,column,kind,items,before,before_rate,after,after_rate,diff_after_minus_before,diff,diff_lo,diff_hi,fisher_p
+M1 missing lookup,Searched the policy documents [primary],searched,rate,12,"100.0% [94.0, 100.0] (60/60)",1.0,"100.0% [94.0, 100.0] (60/60)",1.0,"+0.0 pp [+0.0, +0.0]",0.0,0.0,0.0,1.000
+M1 missing lookup,Answer correct (judge v2),answer_correct,rate,12,"100.0% [94.0, 100.0] (60/60)",1.0,"98.3% [91.1, 99.7] (59/60)",0.9833333333333333,"-1.7 pp [-5.0, +0.0]",-0.01666666666666672,-0.050000000000000044,0.0,1.000
+M1 missing lookup,Task success (process ok and answer correct),task_success,rate,12,"100.0% [94.0, 100.0] (60/60)",1.0,"98.3% [91.1, 99.7] (59/60)",0.9833333333333333,"-1.7 pp [-5.0, +0.0]",-0.01666666666666672,-0.050000000000000044,0.0,1.000
+M1 missing lookup,Routed to the policy agent,route_ok,rate,12,"100.0% [94.0, 100.0] (60/60)",1.0,"100.0% [94.0, 100.0] (60/60)",1.0,"+0.0 pp [+0.0, +0.0]",0.0,0.0,0.0,1.000
+M1 missing lookup,"Answer correct (judge v3, post hoc)",answer_correct_v3,rate,12,"100.0% [94.0, 100.0] (60/60)",1.0,"100.0% [94.0, 100.0] (60/60)",1.0,"+0.0 pp [+0.0, +0.0]",0.0,0.0,0.0,1.000
+M1 missing lookup,"Task success (judge v3, post hoc)",task_success_v3,rate,12,"100.0% [94.0, 100.0] (60/60)",1.0,"100.0% [94.0, 100.0] (60/60)",1.0,"+0.0 pp [+0.0, +0.0]",0.0,0.0,0.0,1.000
+M2 lost context,Tool called with an ID not in the message [primary],invented_id,rate,12,"0.0% [0.0, 6.0] (0/60)",0.0,"0.0% [0.0, 6.0] (0/60)",0.0,"+0.0 pp [+0.0, +0.0]",0.0,0.0,0.0,1.000
+M2 lost context,Tool called with any ID other than the expected one [primary],wrong_id,rate,12,"0.0% [0.0, 6.0] (0/60)",0.0,"0.0% [0.0, 6.0] (0/60)",0.0,"+0.0 pp [+0.0, +0.0]",0.0,0.0,0.0,1.000
+M2 lost context,Order ID present in the handoff (items with an ID),id_in_handoff,rate,8,"100.0% [91.2, 100.0] (40/40)",1.0,"100.0% [91.2, 100.0] (40/40)",1.0,"+0.0 pp [+0.0, +0.0]",0.0,0.0,0.0,1.000
+M2 lost context,Invented ID | ID missing from handoff [primary],invented_id,rate,0,n/a (0 runs),,n/a (0 runs),,n/a,,,,n/a
+M2 lost context,Wrong ID | ID missing from handoff [primary],wrong_id,rate,0,n/a (0 runs),,n/a (0 runs),,n/a,,,,n/a
+M2 lost context,Asked for the order number (no_id items),asked_for_id,rate,4,"80.0% [58.4, 91.9] (16/20)",0.8,"90.0% [69.9, 97.2] (18/20)",0.9,"+10.0 pp [-20.0, +40.0]",0.09999999999999998,-0.19999999999999996,0.4,0.661
+M2 lost context,No tool call (no_id items),no_tool_call,rate,4,"100.0% [83.9, 100.0] (20/20)",1.0,"100.0% [83.9, 100.0] (20/20)",1.0,"+0.0 pp [+0.0, +0.0]",0.0,0.0,0.0,1.000
+M2 lost context,Answer correct (judge v2),answer_correct,rate,12,"58.3% [45.7, 69.9] (35/60)",0.5833333333333334,"70.0% [57.5, 80.1] (42/60)",0.7,"+11.7 pp [+1.7, +21.7]",0.11666666666666659,0.01666666666666672,0.21666666666666667,0.253
+M2 lost context,Task success,task_success,rate,12,"58.3% [45.7, 69.9] (35/60)",0.5833333333333334,"70.0% [57.5, 80.1] (42/60)",0.7,"+11.7 pp [+1.7, +21.7]",0.11666666666666659,0.01666666666666672,0.21666666666666667,0.253
+M2 lost context,"Answer correct (judge v3, post hoc)",answer_correct_v3,rate,12,"80.0% [68.2, 88.2] (48/60)",0.8,"88.3% [77.8, 94.2] (53/60)",0.8833333333333333,"+8.3 pp [-1.7, +21.7]",0.08333333333333326,-0.01666666666666672,0.21666666666666667,0.317
+M2 lost context,"Task success (judge v3, post hoc)",task_success_v3,rate,12,"80.0% [68.2, 88.2] (48/60)",0.8,"88.3% [77.8, 94.2] (53/60)",0.8833333333333333,"+8.3 pp [-1.7, +21.7]",0.08333333333333326,-0.01666666666666672,0.21666666666666667,0.317
+M3 runaway loop,Identical tool calls per run [primary],n_identical_calls,mean,8,"mean 2.42, max 7 (n=40)",2.425,"mean 1.00, max 1 (n=40)",1.0,"-1.4 [-1.9, -1.0]",-1.4249999999999998,-1.9249999999999998,-1.0499999999999998,n/a
+M3 runaway loop,Tool calls per run,n_tool_calls,mean,8,"mean 2.67, max 14 (n=40)",2.675,"mean 1.02, max 2 (n=40)",1.025,"-1.6 [-2.4, -1.0]",-1.65,-2.375,-1.0499999999999998,n/a
+M3 runaway loop,Looped (3+ identical calls or round cap),looped,rate,8,"22.5% [12.3, 37.5] (9/40)",0.225,"0.0% [0.0, 8.8] (0/40)",0.0,"-22.5 pp [-47.5, -5.0]",-0.225,-0.475,-0.05,0.002
+M3 runaway loop,Offered an email follow-up,offered_email,rate,8,"42.5% [28.5, 57.8] (17/40)",0.425,"100.0% [91.2, 100.0] (40/40)",1.0,"+57.5 pp [+35.0, +77.5]",0.575,0.35,0.775,<0.001
+M3 runaway loop,Asked the customer to confirm a correct order ID [exploratory],asked_to_confirm_id,rate,8,"45.0% [30.7, 60.2] (18/40)",0.45,"0.0% [0.0, 8.8] (0/40)",0.0,"-45.0 pp [-62.5, -25.0]",-0.45,-0.625,-0.25,<0.001
+M3 runaway loop,Answer correct (judge v2),answer_correct,rate,8,"75.0% [59.8, 85.8] (30/40)",0.75,"95.0% [83.5, 98.6] (38/40)",0.95,"+20.0 pp [+5.0, +35.0]",0.19999999999999996,0.04999999999999993,0.3500000000000001,0.025
+M3 runaway loop,Task success,task_success,rate,8,"62.5% [47.0, 75.8] (25/40)",0.625,"95.0% [83.5, 98.6] (38/40)",0.95,"+32.5 pp [+15.0, +55.0]",0.32499999999999996,0.1499999999999999,0.55,<0.001
+M3 runaway loop,Tokens per conversation,total_tokens,mean,8,"mean 2331.70, max 8876 (n=40)",2331.7,"mean 1693.55, max 2324 (n=40)",1693.55,"-638.1 [-1165.8, -168.0]",-638.1499999999999,-1165.8249999999998,-168.02750000000052,n/a
+M3 runaway loop,Latency per conversation (s),latency_s,mean,8,"mean 12.60, max 27 (n=40)",12.595125,"mean 9.53, max 13 (n=40)",9.528625,"-3.1 [-4.5, -1.6]",-3.0664999999999996,-4.509758124999999,-1.6324125000000034,n/a
+M3 runaway loop,"Answer correct (judge v3, post hoc)",answer_correct_v3,rate,8,"75.0% [59.8, 85.8] (30/40)",0.75,"95.0% [83.5, 98.6] (38/40)",0.95,"+20.0 pp [+7.5, +35.0]",0.19999999999999996,0.07499999999999996,0.35,0.025
+M3 runaway loop,"Task success (judge v3, post hoc)",task_success_v3,rate,8,"62.5% [47.0, 75.8] (25/40)",0.625,"95.0% [83.5, 98.6] (38/40)",0.95,"+32.5 pp [+15.0, +55.0]",0.32499999999999996,0.1499999999999999,0.55,<0.001
+Control,Routed correctly [primary],route_ok,rate,8,"100.0% [91.2, 100.0] (40/40)",1.0,"100.0% [91.2, 100.0] (40/40)",1.0,"+0.0 pp [+0.0, +0.0]",0.0,0.0,0.0,1.000
+Control,Answer correct (judge v2) [primary],answer_correct,rate,8,"70.0% [54.6, 81.9] (28/40)",0.7,"80.0% [65.2, 89.5] (32/40)",0.8,"+10.0 pp [+0.0, +25.0]",0.10000000000000009,0.0,0.24999999999999994,0.439
+Control,No function tool call,no_tool_call,rate,8,"100.0% [91.2, 100.0] (40/40)",1.0,"100.0% [91.2, 100.0] (40/40)",1.0,"+0.0 pp [+0.0, +0.0]",0.0,0.0,0.0,1.000
+Control,Task success,task_success,rate,8,"70.0% [54.6, 81.9] (28/40)",0.7,"80.0% [65.2, 89.5] (32/40)",0.8,"+10.0 pp [+0.0, +25.0]",0.10000000000000009,0.0,0.24999999999999994,0.439
+Control,"Answer correct (judge v3, post hoc)",answer_correct_v3,rate,8,"70.0% [54.6, 81.9] (28/40)",0.7,"80.0% [65.2, 89.5] (32/40)",0.8,"+10.0 pp [+0.0, +25.0]",0.10000000000000009,0.0,0.24999999999999994,0.439
+Control,"Task success (judge v3, post hoc)",task_success_v3,rate,8,"70.0% [54.6, 81.9] (28/40)",0.7,"80.0% [65.2, 89.5] (32/40)",0.8,"+10.0 pp [+0.0, +25.0]",0.10000000000000009,0.0,0.24999999999999994,0.439

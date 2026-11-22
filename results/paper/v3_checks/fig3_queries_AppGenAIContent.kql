@@ -1,0 +1,14 @@
+// (c) Error contract, reading the value from the protected AppGenAIContent table
+AppGenAIContent
+| where ToolCallResult == "Error"
+| distinct TraceId
+
+
+// (b) Repetition, tool name and type from AppDependencies, arguments from AppGenAIContent (joined on the span id)
+AppDependencies
+| where Name startswith "execute_tool"
+| where tostring(Properties["gen_ai.tool.type"]) == "function"
+| project SpanId = Id, OperationId, tool = tostring(Properties["gen_ai.tool.name"])
+| join kind=inner (AppGenAIContent | project SpanId, args = ToolCallArguments) on SpanId
+| summarize n = count() by OperationId, tool, args
+| where n >= 3

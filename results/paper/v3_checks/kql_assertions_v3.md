@@ -1,0 +1,22 @@
+# Fig. 3 queries as printed in paper v3, run in Application Insights (2026-11-16T00:00:00Z to 2026-11-18T00:00:00Z)
+
+Hits are distinct operation_Ids (traces) matched to the 800 main-run conversations. Hits outside the main runs (smoke and trace-check pilot traces from the same days): (a) 0, (b) 0, (c) 1.
+
+| model        | scenario   | condition   |   conversations |   omission_hits |   client_policy_not_searched |   repetition_hits |   client_looped |   error_contract_hits |   exported_spans_error | error_contract_equals_exported   |
+|:-------------|:-----------|:------------|----------------:|----------------:|-----------------------------:|------------------:|----------------:|----------------------:|-----------------------:|:---------------------------------|
+| gpt-5-mini   | control    | after       |              40 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-5-mini   | control    | before      |              40 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-5-mini   | mistake1   | after       |              60 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-5-mini   | mistake1   | before      |              60 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-5-mini   | mistake2   | after       |              60 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-5-mini   | mistake2   | before      |              60 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-5-mini   | mistake3   | after       |              40 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-5-mini   | mistake3   | before      |              40 |               0 |                            0 |                 9 |               9 |                    40 |                     40 | True                             |
+| gpt-4.1-mini | control    | after       |              40 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-4.1-mini | control    | before      |              40 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-4.1-mini | mistake1   | after       |              60 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-4.1-mini | mistake1   | before      |              60 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-4.1-mini | mistake2   | after       |              60 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-4.1-mini | mistake2   | before      |              60 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-4.1-mini | mistake3   | after       |              40 |               0 |                            0 |                 0 |               0 |                     0 |                      0 | True                             |
+| gpt-4.1-mini | mistake3   | before      |              40 |               0 |                            0 |                 0 |               0 |                    40 |                     40 | True                             |

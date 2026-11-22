@@ -1,0 +1,22 @@
+\begin{tabular}{lllll}
+\toprule
+scenario & metric & before & after & p\_value \\
+\midrule
+M1: missing lookup & Task success & 100.0\% [94.0, 100.0] (60/60) & 98.3\% [91.1, 99.7] (59/60) & 1.000 \\
+M1: missing lookup & Answer correct (judge) & 100.0\% [94.0, 100.0] (60/60) & 98.3\% [91.1, 99.7] (59/60) & 1.000 \\
+M1: missing lookup & Correct process & 100.0\% [94.0, 100.0] (60/60) & 100.0\% [94.0, 100.0] (60/60) & 1.000 \\
+M1: missing lookup & Searched policy documents & 100.0\% [94.0, 100.0] (60/60) & 100.0\% [94.0, 100.0] (60/60) & 1.000 \\
+M2: lost context & Task success & 58.3\% [45.7, 69.9] (35/60) & 70.0\% [57.5, 80.1] (42/60) & 0.253 \\
+M2: lost context & Answer correct (judge) & 58.3\% [45.7, 69.9] (35/60) & 70.0\% [57.5, 80.1] (42/60) & 0.253 \\
+M2: lost context & Correct process & 100.0\% [94.0, 100.0] (60/60) & 100.0\% [94.0, 100.0] (60/60) & 1.000 \\
+M2: lost context & Order ID reached order agent & 100.0\% [91.2, 100.0] (40/40) & 100.0\% [91.2, 100.0] (40/40) & 1.000 \\
+M2: lost context & Tool called with invented order ID & 0.0\% [0.0, 6.0] (0/60) & 0.0\% [0.0, 6.0] (0/60) & 1.000 \\
+M3: runaway loop & Task success & 62.5\% [47.0, 75.8] (25/40) & 95.0\% [83.5, 98.6] (38/40) & <0.001 \\
+M3: runaway loop & Answer correct (judge) & 75.0\% [59.8, 85.8] (30/40) & 95.0\% [83.5, 98.6] (38/40) & 0.025 \\
+M3: runaway loop & Correct process & 77.5\% [62.5, 87.7] (31/40) & 100.0\% [91.2, 100.0] (40/40) & 0.002 \\
+M3: runaway loop & Same tool call repeated 3+ times & 22.5\% [12.3, 37.5] (9/40) & 0.0\% [0.0, 8.8] (0/40) & 0.002 \\
+Control & Task success & 70.0\% [54.6, 81.9] (28/40) & 80.0\% [65.2, 89.5] (32/40) & 0.439 \\
+Control & Answer correct (judge) & 70.0\% [54.6, 81.9] (28/40) & 80.0\% [65.2, 89.5] (32/40) & 0.439 \\
+Control & Correct process & 100.0\% [91.2, 100.0] (40/40) & 100.0\% [91.2, 100.0] (40/40) & 1.000 \\
+\bottomrule
+\end{tabular}

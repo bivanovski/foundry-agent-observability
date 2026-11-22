@@ -1,0 +1,28 @@
+// Fig. 3a  Omission: policy agent answered without searching the policy documents
+let conversations = dependencies
+    | where name startswith "invoke_workflow"
+    | project operation_Id,
+              qid = tostring(customDimensions["experiment.qid"]),
+              condition = tostring(customDimensions["experiment.condition"]);
+let policy_invoked = dependencies
+    | where name startswith "invoke_agent policy-agent" and name !contains ":"
+    | distinct operation_Id;
+let searched = dependencies
+    | where name startswith "execute_tool file_search"
+    | distinct operation_Id;
+conversations
+| join kind=inner policy_invoked on operation_Id
+| join kind=leftanti searched on operation_Id
+| project operation_Id, qid, condition
+
+
+// Fig. 3b  Repetition: the same tool call (name + arguments) executed 3+ times in one conversation
+dependencies
+| where name startswith "execute_tool"
+    and tostring(customDimensions["gen_ai.tool.type"]) == "function"
+| summarize identical_calls = count()
+    by operation_Id,
+       tool = tostring(customDimensions["gen_ai.tool.name"]),
+       arguments = tostring(customDimensions["gen_ai.tool.call.arguments"])
+| where identical_calls >= 3
+| summarize max_identical_calls = max(identical_calls) by operation_Id

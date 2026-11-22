@@ -1,0 +1,72 @@
+[
+  {
+    "OperationId": "abb877f81286b2a799a4da08b65b5c6e",
+    "TableName": "PrimaryResult",
+    "args": "{\"order_id\": \"72560\"}",
+    "n": "3",
+    "tool": "get_order_status"
+  },
+  {
+    "OperationId": "1c6405418cae7561cf116c98f4930d79",
+    "TableName": "PrimaryResult",
+    "args": "{\"order_id\": \"60412\"}",
+    "n": "7",
+    "tool": "get_order_status"
+  },
+  {
+    "OperationId": "1c6405418cae7561cf116c98f4930d79",
+    "TableName": "PrimaryResult",
+    "args": "{\"order_id\": \"60412\", \"reason\": \"Customer requested return for keyboard\"}",
+    "n": "7",
+    "tool": "create_return"
+  },
+  {
+    "OperationId": "f181a2e72818cc7a4a2919f9d595bfbe",
+    "TableName": "PrimaryResult",
+    "args": "{\"order_id\": \"48213\"}",
+    "n": "3",
+    "tool": "get_order_status"
+  },
+  {
+    "OperationId": "3f788e438b54dbf3f3251e6107de6e63",
+    "TableName": "PrimaryResult",
+    "args": "{\"order_id\": \"51877\"}",
+    "n": "3",
+    "tool": "get_order_status"
+  },
+  {
+    "OperationId": "093526befaded1356e3a9b78f250d56b",
+    "TableName": "PrimaryResult",
+    "args": "{\"order_id\": \"51877\"}",
+    "n": "3",
+    "tool": "get_order_status"
+  },
+  {
+    "OperationId": "e3d4112aee1719d4f6bdacdbcc09e153",
+    "TableName": "PrimaryResult",
+    "args": "{\"order_id\": \"72560\"}",
+    "n": "5",
+    "tool": "get_order_status"
+  },
+  {
+    "OperationId": "e835f1ffe74a9120b004d94176b48f6a",
+    "TableName": "PrimaryResult",
+    "args": "{\"order_id\": \"72560\"}",
+    "n": "3",
+    "tool": "get_order_status"
+  },
+  {
+    "OperationId": "95db793718da278df92030220aacb70c",
+    "TableName": "PrimaryResult",
+    "args": "{\"order_id\": \"72560\"}",
+    "n": "3",
+    "tool": "get_order_status"
+  },
+  {
+    "OperationId": "2e0fea3c358956c0af5913063bea5867",
+    "TableName": "PrimaryResult",
+    "args": "{\"order_id\": \"72560\"}",
+    "n": "6",
+    "tool": "get_order_status"
+  }
+]

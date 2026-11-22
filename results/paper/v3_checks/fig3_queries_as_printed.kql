@@ -1,0 +1,26 @@
+// (a) Omission: policy agent ran, no file search
+let searched = dependencies
+  | where name startswith "execute_tool file_search"
+  | distinct operation_Id;
+dependencies
+| where name startswith "invoke_agent policy-agent"
+    and name !contains ":"
+| distinct operation_Id
+| join kind=leftanti searched on operation_Id
+
+
+// (b) Repetition: same function call 3+ times
+dependencies
+| where name startswith "execute_tool"
+| extend d = customDimensions
+| where tostring(d["gen_ai.tool.type"]) == "function"
+| summarize n = count() by operation_Id,
+    tool = tostring(d["gen_ai.tool.name"]),
+    args = tostring(d["gen_ai.tool.call.arguments"])
+| where n >= 3
+
+
+// (c) Error contract: a tool returned a bare "Error"
+dependencies | where name startswith "execute_tool"
+| where tostring(customDimensions
+    ["gen_ai.tool.call.result"]) == "Error"

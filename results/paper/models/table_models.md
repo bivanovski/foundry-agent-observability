@@ -1,0 +1,24 @@
+# Model comparison: pre-registered primary metrics
+
+Reference model: gpt-5-mini. `fix_effect` = after minus before with a 95% bootstrap CI over items. `effect_vs_gpt-5-mini` = this model's fix effect minus the reference model's, paired bootstrap over items (a CI that excludes 0 means the fix works differently on the two models).
+
+| scenario          | metric                                                         | model        | before                       | after                        | fix_effect                 | effect_vs_gpt-5-mini    |
+|:------------------|:---------------------------------------------------------------|:-------------|:-----------------------------|:-----------------------------|:---------------------------|:------------------------|
+| M1 missing lookup | Searched the policy documents                                  | gpt-5-mini   | 100.0% [94.0, 100.0] (60/60) | 100.0% [94.0, 100.0] (60/60) | +0.0 pp [+0.0, +0.0]       |                         |
+| M1 missing lookup | Searched the policy documents                                  | gpt-4.1-mini | 100.0% [94.0, 100.0] (60/60) | 100.0% [94.0, 100.0] (60/60) | +0.0 pp [+0.0, +0.0]       | +0.0 pp [+0.0, +0.0]    |
+| M2 lost context   | Tool called with an ID not in the message                      | gpt-5-mini   | 0.0% [0.0, 6.0] (0/60)       | 0.0% [0.0, 6.0] (0/60)       | +0.0 pp [+0.0, +0.0]       |                         |
+| M2 lost context   | Tool called with an ID not in the message                      | gpt-4.1-mini | 0.0% [0.0, 6.0] (0/60)       | 0.0% [0.0, 6.0] (0/60)       | +0.0 pp [+0.0, +0.0]       | +0.0 pp [+0.0, +0.0]    |
+| M2 lost context   | Tool called with any ID other than the expected one            | gpt-5-mini   | 0.0% [0.0, 6.0] (0/60)       | 0.0% [0.0, 6.0] (0/60)       | +0.0 pp [+0.0, +0.0]       |                         |
+| M2 lost context   | Tool called with any ID other than the expected one            | gpt-4.1-mini | 0.0% [0.0, 6.0] (0/60)       | 0.0% [0.0, 6.0] (0/60)       | +0.0 pp [+0.0, +0.0]       | +0.0 pp [+0.0, +0.0]    |
+| M2 lost context   | Invented ID | ID missing from handoff                          | gpt-5-mini   | n/a (0 runs)                 | n/a (0 runs)                 | n/a                        |                         |
+| M2 lost context   | Invented ID | ID missing from handoff                          | gpt-4.1-mini | n/a (0 runs)                 | n/a (0 runs)                 | n/a                        | n/a                     |
+| M2 lost context   | Wrong ID | ID missing from handoff                             | gpt-5-mini   | n/a (0 runs)                 | n/a (0 runs)                 | n/a                        |                         |
+| M2 lost context   | Wrong ID | ID missing from handoff                             | gpt-4.1-mini | n/a (0 runs)                 | n/a (0 runs)                 | n/a                        | n/a                     |
+| M3 runaway loop   | Identical tool calls per run                                   | gpt-5-mini   | mean 2.42, max 7 (n=40)      | mean 1.00, max 1 (n=40)      | -1.4 [-1.9, -1.0]          |                         |
+| M3 runaway loop   | Identical tool calls per run                                   | gpt-4.1-mini | mean 1.05, max 2 (n=40)      | mean 1.00, max 1 (n=40)      | -0.1 [-0.1, +0.0]          | +1.4 [+1.0, +1.8]       |
+| M3 runaway loop   | Asked the customer to confirm a correct order ID [exploratory] | gpt-5-mini   | 45.0% [30.7, 60.2] (18/40)   | 0.0% [0.0, 8.8] (0/40)       | -45.0 pp [-62.5, -27.4]    |                         |
+| M3 runaway loop   | Asked the customer to confirm a correct order ID [exploratory] | gpt-4.1-mini | 100.0% [91.2, 100.0] (40/40) | 0.0% [0.0, 8.8] (0/40)       | -100.0 pp [-100.0, -100.0] | -55.0 pp [-72.5, -37.5] |
+| Control           | Routed correctly                                               | gpt-5-mini   | 100.0% [91.2, 100.0] (40/40) | 100.0% [91.2, 100.0] (40/40) | +0.0 pp [+0.0, +0.0]       |                         |
+| Control           | Routed correctly                                               | gpt-4.1-mini | 100.0% [91.2, 100.0] (40/40) | 100.0% [91.2, 100.0] (40/40) | +0.0 pp [+0.0, +0.0]       | +0.0 pp [+0.0, +0.0]    |
+| Control           | Answer correct (judge v2)                                      | gpt-5-mini   | 70.0% [54.6, 81.9] (28/40)   | 80.0% [65.2, 89.5] (32/40)   | +10.0 pp [+0.0, +25.0]     |                         |
+| Control           | Answer correct (judge v2)                                      | gpt-4.1-mini | 75.0% [59.8, 85.8] (30/40)   | 87.5% [73.9, 94.5] (35/40)   | +12.5 pp [+0.0, +32.5]     | +2.5 pp [-20.0, +30.0]  |

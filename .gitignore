@@ -1,0 +1,11 @@
+.env
+.state.json
+.state.*.json
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.zip
+*.log
+*.partial.jsonl
+results/rerun/

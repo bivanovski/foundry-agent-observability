@@ -1,0 +1,5 @@
+scenario,latency_median_s_before,latency_p95_s_before,tokens_mean_before,model_calls_mean_before,tool_calls_mean_before,latency_median_s_after,latency_p95_s_after,tokens_mean_after,model_calls_mean_after,tool_calls_mean_after,latency_p,tokens_p
+M1: missing lookup,12.55,16.7,4524.0,2.0,0.0,13.29,17.88,4633.0,2.0,0.0,0.525,0.030
+M2: lost context,9.29,13.49,1546.0,2.78,0.82,8.99,13.43,1729.0,2.75,0.82,0.525,0.065
+M3: runaway loop,11.77,16.9,2332.0,4.5,2.68,9.2,12.53,1694.0,3.0,1.02,<0.001,<0.001
+Control,4.13,16.57,2259.0,1.38,0.0,5.08,16.73,2065.0,1.38,0.0,0.462,0.704

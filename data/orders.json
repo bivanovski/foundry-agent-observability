@@ -1,0 +1,14 @@
+{
+  "48213": {"customer": "Marko P.", "items": ["Sony over-ear headphones"], "status": "in_transit", "carrier": "PostExpress", "estimated_delivery": "2026-11-23", "note": "Delayed at the regional sorting centre. New estimated delivery is 23 November."},
+  "51877": {"customer": "Ana T.", "items": ["Logitech webcam"], "status": "out_for_delivery", "carrier": "PostExpress", "estimated_delivery": "2026-11-19", "note": "Out for delivery today."},
+  "60412": {"customer": "Elena S.", "items": ["Mechanical keyboard"], "status": "delivered", "delivered_on": "2026-11-07", "note": "Delivered 12 days ago."},
+  "33019": {"customer": "Petar K.", "items": ["27-inch monitor"], "status": "delivered", "delivered_on": "2026-11-15", "note": "Delivered and signed for by P. Kostov."},
+  "72560": {"customer": "Ivana M.", "items": ["Gaming laptop"], "status": "processing", "estimated_dispatch": "2026-11-20", "note": "Waiting to be packed. Ships within 1 business day."},
+  "15428": {"customer": "Dimitar V.", "items": ["Smartwatch"], "status": "shipped", "carrier": "DHL", "estimated_delivery": "2026-11-21", "note": "Handed to DHL."},
+  "90031": {"customer": "Sara L.", "items": ["Tablet"], "status": "cancelled", "note": "Cancelled because the payment was declined by the bank."},
+  "27745": {"customer": "Bojana R.", "items": ["Wireless mouse"], "status": "delivered", "delivered_on": "2026-11-12", "note": "Delivered 7 days ago."},
+  "84402": {"customer": "Nikola D.", "items": ["Bluetooth speaker"], "status": "in_transit", "carrier": "DHL", "estimated_delivery": "2026-11-20", "note": "In transit, on schedule."},
+  "39916": {"customer": "Maja G.", "items": ["Graphics card"], "status": "awaiting_stock", "estimated_dispatch": "2026-12-02", "note": "Item back-ordered. Expected to ship on 2 December."},
+  "46651": {"customer": "Filip J.", "items": ["Phone charger"], "status": "shipped", "carrier": "PostExpress", "estimated_delivery": "2026-11-20", "note": "Shipped."},
+  "58820": {"customer": "Teodora N.", "items": ["E-reader"], "status": "delivered", "delivered_on": "2026-11-17", "note": "Delivered."}
+}
